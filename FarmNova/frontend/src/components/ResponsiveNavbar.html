@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FarmNova Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.5rem;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .navbar-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #22c55e;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .navbar-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .navbar-links a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .navbar-links a:hover {
+      color: #22c55e;
+    }
+    .navbar-cart {
+      font-size: 1.4rem;
+      color: #22c55e;
+      margin-left: 1.5rem;
+      position: relative;
+      cursor: pointer;
+    }
+    .navbar-hamburger {
+      display: none;
+      font-size: 1.7rem;
+      background: none;
+      border: none;
+      color: #222;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .navbar-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .navbar-links.active {
+        display: flex;
+      }
+      .navbar-hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="/logo192.png" alt="FarmNova Logo" style="height:32px;width:32px;object-fit:cover;border-radius:6px;">
+      FarmNova
+    </div>
+    <button class="navbar-hamburger" id="navbar-hamburger" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="navbar-links" id="navbar-links">
+      <a href="/">Home</a>
+      <a href="/marketplace">Marketplace</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/farmer-login">Farmer Login</a>
+    </div>
+    <a href="/cart" class="navbar-cart" aria-label="Cart">
+      <i class="fas fa-shopping-cart"></i>
+    </a>
+  </nav>
+  <script>
+    const hamburger = document.getElementById('navbar-hamburger');
+    const links = document.getElementById('navbar-links');
+    hamburger.addEventListener('click', () => {
+      links.classList.toggle('active');
+    });
+    // Optional: close menu on link click (mobile)
+    Array.from(links.getElementsByTagName('a')).forEach(link => {
+      link.addEventListener('click', () => {
+        links.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

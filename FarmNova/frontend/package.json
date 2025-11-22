@@ -1,0 +1,58 @@
+{
+  "name": "farmnova-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "ajv": "^6.12.6",
+    "ajv-keywords": "^3.5.2",
+    "axios": "^0.21.1",
+    "firebase": "^11.10.0",
+    "framer-motion": "^5.5.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^5.5.0",
+    "react-lazyload": "^3.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-slick": "^0.30.3",
+    "react-toastify": "^11.0.5",
+    "react-tooltip": "^5.29.1",
+    "recharts": "^3.0.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "react-scripts": "^5.0.1",
+    "tailwindcss": "^3.4.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "errorMessages": {
+    "framerMotion": "You are still seeing this error because either:\n1. The wrong version of framer-motion is installed, or\n2. node_modules and package-lock.json were not fully deleted before reinstalling.\n\nPlease follow these steps EXACTLY:\n\n1. Open PowerShell in your project directory.\n2. Run these commands one by one:\n\n   Remove-Item -Recurse -Force node_modules\n   Remove-Item -Force package-lock.json\n   npm uninstall framer-motion\n   npm install framer-motion@5.5.5 --legacy-peer-deps\n\n3. Confirm your package.json contains ONLY:\n   \"framer-motion\": \"5.5.5\"\n\n4. Run:\n   npm install --legacy-peer-deps\n   npm start\n\nIf you still see the error, please copy the output of\n   npm list framer-motion\nand share it here.\n\nYou still have the wrong version of framer-motion installed.\nTo fix this error, follow these steps exactly:\n\n// 1. Uninstall framer-motion:\n   npm uninstall framer-motion\n\n// 2. Delete node_modules and package-lock.json:\n   Remove-Item -Recurse -Force node_modules\n   Remove-Item -Force package-lock.json\n\n// 3. Install the correct version for React 17:\n   npm install framer-motion@5.5.5 --legacy-peer-deps\n\n// 4. Verify the version:\n   npm list framer-motion\n   It should show ONLY framer-motion@5.5.5\n\n// 5. Start your server:\n   npm start\n\n// Do not change any source code files for this error.\n// The problem is only with your dependency version."
+  },
+  "proxy": "http://localhost:5000"
+}
